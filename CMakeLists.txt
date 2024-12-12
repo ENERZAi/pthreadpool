@@ -6,7 +6,7 @@ PROJECT(pthreadpool C)
 # ---[ Options.
 SET(PTHREADPOOL_LIBRARY_TYPE "default" CACHE STRING "Type of library (shared, static, or default) to build")
 SET_PROPERTY(CACHE PTHREADPOOL_LIBRARY_TYPE PROPERTY STRINGS default static shared)
-OPTION(PTHREADPOOL_ALLOW_DEPRECATED_API "Enable deprecated API functions" ON)
+OPTION(PTHREADPOOL_ALLOW_DEPRECATED_API "Enable deprecated API functions" OFF)
 SET(PTHREADPOOL_SYNC_PRIMITIVE "default" CACHE STRING "Synchronization primitive (condvar, futex, gcd, event, or default) for worker threads")
 SET_PROPERTY(CACHE PTHREADPOOL_SYNC_PRIMITIVE PROPERTY STRINGS default condvar futex gcd event)
 IF(CMAKE_SYSTEM_PROCESSOR MATCHES "^(i[3-6]86|AMD64|x86(_64)?)$")
